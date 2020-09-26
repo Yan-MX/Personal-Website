@@ -12,6 +12,7 @@ function App() {
       <LandingPage />
       <Decor />
       <Project />
+      <Decor />
       <Contact />
     </div>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-
+import cv from "../pic/cv.pdf";
 function Navigator() {
   let Container = styled.div`
     display: grid;
@@ -22,7 +22,7 @@ function Navigator() {
         <Link>About</Link>
         <Link>Projects</Link>
         <Link>Contact</Link>
-        <Link>CV</Link>
+        <Link href={cv}>CV</Link>
       </NavContainer>
     </Container>
   );

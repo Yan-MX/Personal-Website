@@ -4,11 +4,13 @@ import styled from "@emotion/styled";
 
 function Decor() {
   let Img = styled.img`
-    width: 100%;
+    width: 40%;
     opacity: 10%;
+    padding: 0;
   `;
   return (
     <div>
+      <Img src={landscape} alt="breaking line" />
       <Img src={landscape} alt="breaking line" />
     </div>
   );
