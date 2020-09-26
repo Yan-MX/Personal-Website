@@ -14,10 +14,13 @@ function Navigator() {
   let Link = styled.a`
     color: #d43109;
   `;
+  let H1 = styled.h1`
+    opacity: 30%;
+  `;
 
   return (
     <Container>
-      <h1>Yan</h1>
+      <H1>Yan</H1>
       <NavContainer>
         <Link>About</Link>
         <Link>Projects</Link>
