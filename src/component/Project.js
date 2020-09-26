@@ -18,6 +18,7 @@ function Project() {
   let Img = styled.img`
     max-width: 40vw;
     width: 100%;
+    max-height: 60vw;
     padding: 0;
     margin: 0;
     opacity: 70%;

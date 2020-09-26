@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300&family=Lobster&family=Permanent+Marker&display=swap");
 
 * {
   background-color: #f4f6ff;
@@ -10,7 +10,7 @@
   color: #4f8a8b;
 }
 h1 {
-  /* font-family: "Lobster", cursive; */
+  font-family: "Permanent Marker", cursive;
   color: #2ec1ac;
   opacity: 30%;
   font-size: 5vw;
