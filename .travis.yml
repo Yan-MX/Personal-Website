@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "12"
+script:
+  - npm test
+  - npm run build
+deploy:
+  provider: heroku
+  app: yanjiang
+  api_key:
+    secure: iYWVO5rxbtMsSPlpmLCghxRA0iB3W+ESlJsK4dzFseyhyKP6qKSBAKs390db2x2l1MGjsVmcgDJvNQKGOv9/JYKDmUMdUzhwxuc6nfZkQWcx9i89W3ouyV2hAXdlevOiSP/Sz1N7e/sKZv/h/qrhHpr4HK1VtD84duW/0Lz8JNzYjRihj8n4ukgBPch6pZch6UkBOsP4dd8PJsw9Y9gKR2J61akIXUHy91Og6ApcHm6QfyI5KDAEVxgj9Zy/k2WgDRwLE6h8Z8lNUizuYetXGNzQtxtbds4zdraVJ2kbiUHTFiXGeZYkWPRtdsxCP6BqmFkB90mxi3gh6/emXP9ZFH1QQW9PgFPC1h+5xL3SGa/5o1ofnE8eBKSOEs1BQ/vGy2xBJHOGfiw3q/BUh6osait2GimXthAu9Ar/HtiYMgEoyxsIrkO95dti36sEOtKWw72LgOzEgDTaZQYECCyB6WkogOyIiGXWcrORghEAMeN7cwOn1/tNl6ukrvGtl3+iGcg0G9gjj3afXJCDC4uw+RYHaplSiJPjY4UwK9PE1h6Z5nWSv1Q9fFb61OpAEpkaaAm/34hWyovenqeUhK2asU8y4RNt2DvwX63Vj4qcTkVpNg9Jt2Yth2I2H4r+rrIWO6LuJH9B0Y6JT5OHXWZ+z6cnTqTgta8vE+AYTAPom68=
