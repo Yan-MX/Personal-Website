@@ -46,12 +46,17 @@ function LandingPage() {
         </Text1>
         <Button>Get in Touch</Button>
         <IconContainer>
-          <a href="https://github.com/Yan-MX" target="_blank">
+          <a
+            href="https://github.com/Yan-MX"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaGithub />
           </a>
 
           <a
             href="https://www.linkedin.com/in/jiang-yan-19a71a53/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <IconContext.Provider value={{ margin: 0, padding: 0 }}>
@@ -59,7 +64,11 @@ function LandingPage() {
             </IconContext.Provider>
           </a>
 
-          <a href="https://www.instagram.com/yanjiangpom/" target="_blank">
+          <a
+            href="https://www.instagram.com/yanjiangpom/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <FaInstagram />
           </a>
         </IconContainer>
