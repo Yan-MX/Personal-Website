@@ -5,9 +5,13 @@
   font-family: "Gothic A1", sans-serif;
   font-size: 1.5vw;
   box-sizing: border-box;
-  margin: 1vw 2vw;
+  margin: 0;
   padding: 0;
   color: #4f8a8b;
+}
+div {
+  margin: 2vw 4vw;
+  padding: 0;
 }
 h1 {
   font-family: "Lobster", cursive;
@@ -20,4 +24,7 @@ button {
   border-radius: 1vw;
   color: white;
   border: 0;
+}
+p {
+  margin: 1vw 0;
 }

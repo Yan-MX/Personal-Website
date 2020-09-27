@@ -15,13 +15,30 @@ function Project() {
     padding: 0.5vw;
     width: 10vw;
   `;
+  let Figure = styled.figure`
+    position: relative;
+    float: left;
+    cursor: pointer;
+    :before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(79, 138, 139, 0.5);
+      transition: background 0.3s linear;
+    }
+    :hover:before {
+      background: none;
+    }
+  `;
   let Img = styled.img`
-    max-width: 40vw;
-    width: 100%;
+    width: 30vw;
     max-height: 60vw;
     padding: 0;
     margin: 0;
-    opacity: 70%;
   `;
   let Container = styled.div`
     box-shadow: 0 4px 8px 0 #4f8a8b;
@@ -43,7 +60,9 @@ function Project() {
           return (
             <Container key={project.id}>
               <FlexContainer>
-                <Img src={project.pic} alt="Website preview" />
+                <Figure>
+                  <Img src={project.pic} alt="Website preview" />
+                </Figure>
                 <div>
                   <p>{project.name}</p>
                   <p>{project.description}</p>

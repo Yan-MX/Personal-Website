@@ -4,9 +4,9 @@ import drawing2 from "../pic/contact3.png";
 function Contact() {
   let Container = styled.div`
     width: 100%;
-    padding-right: 30vw;
+    padding-right: 70%;
     display: grid;
-    grid-template-columns: 35% 1fr;
+    grid-template-columns: 50% 1fr;
   `;
   let TextContainer = styled.div`
     display: flex;
@@ -24,11 +24,13 @@ function Contact() {
     color: #d43109;
     font-size: 2vw;
     line-height: 60%;
+    z-index: 1;
   `;
   let Button = styled.button`
     background-color: #4f8a8b;
     margin-left: 30%;
     width: 10vw;
+    z-index: 1;
   `;
 
   return (

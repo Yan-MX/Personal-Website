@@ -16,6 +16,9 @@ function Navigator() {
   `;
   let H1 = styled.h1`
     opacity: 30%;
+    :hover {
+      opacity: 1;
+    }
   `;
 
   return (

@@ -1,0 +1,25 @@
+#bg1 {
+  animation: wheel 60s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+@keyframes wheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+#mouth {
+  animation: mouth 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+@keyframes mouth {
+  from {
+    transform: rotateX(-2deg);
+  }
+  to {
+    transform: rotateX(6deg);
+  }
+}
