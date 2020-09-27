@@ -9,6 +9,10 @@ function About() {
   `;
   let Svg = styled.svg`
     width: 30vw;
+    height: 40vw;
+  `;
+  let P = styled.p`
+    margin-top: 3vw;
   `;
   return (
     <Container>
@@ -350,9 +354,9 @@ function About() {
         </defs>
       </Svg>
       <div>
-        <p>
+        <P>
           About Me <ImSmile />
-        </p>
+        </P>
         <hr />
         <p>
           I have two and half years of programming experience. I study
