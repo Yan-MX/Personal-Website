@@ -359,11 +359,11 @@ function About() {
         </P>
         <hr />
         <p>
-          I have two and half years of programming experience. I study
-          informatics at University of Oslo. I love design and build things. I
-          have been mostly working on Web & App development. I alway enjoy
-          programming and learning new technologies along the way. I would
-          describe myself as a quick-learner and a self-motivated person.
+          I started programming in 2018 and study informatics at University of
+          Oslo. I love design and build things. I have been mostly working on
+          Web & App development. I alway enjoy programming and learning new
+          technologies along the way. I would describe myself as a quick-learner
+          and a self-motivated person.
         </p>
         <p>
           My working philosophies:

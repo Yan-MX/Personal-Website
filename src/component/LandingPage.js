@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import drawing from "../pic/coding.png";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IconContext } from "react-icons";
-function LandingPage() {
+function LandingPage({ setScreen }) {
   let Container = styled.div`
     display: grid;
     grid-template-columns: 55% 45%;
@@ -32,7 +32,9 @@ function LandingPage() {
     background-color: #d43109;
     margin: 3vw 0 3vw 50%;
   `;
-
+  const ClickHandler = (e) => {
+    setScreen("contact");
+  };
   return (
     <Container>
       <TextContainer>
@@ -44,7 +46,7 @@ function LandingPage() {
           I am a software developer based in Oslo, specializing in building and
           occasionally designing websites, apps.
         </Text1>
-        <Button>Get in Touch</Button>
+        <Button onClick={ClickHandler}>Get in Touch</Button>
         <IconContainer>
           <a
             href="https://github.com/Yan-MX"

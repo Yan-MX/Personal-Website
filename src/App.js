@@ -5,7 +5,9 @@ import LandingPage from "./component/LandingPage";
 import Decor from "./component/Decor";
 import Project from "./component/Project";
 import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 import About from "./component/About";
+import Form from "./component/Form";
 import { useState } from "react";
 function App() {
   const [screen, setScreen] = useState("main");
@@ -16,12 +18,13 @@ function App() {
         return (
           <div>
             <Navigator setScreen={setScreen} />
-            <LandingPage />
+            <LandingPage setScreen={setScreen} />
             <Decor />
             <Project />
+            <Decor /> <About />
             <Decor />
-            <Contact />
-            <About />
+            <Contact setScreen={setScreen} />
+            <Footer />
           </div>
         );
       case "about":
@@ -29,13 +32,16 @@ function App() {
           <div>
             <Navigator setScreen={setScreen} />
             <About />
+            <Footer />
           </div>
         );
       case "contact":
         return (
           <div>
             <Navigator setScreen={setScreen} />
-            <Contact />
+            <Form />
+
+            <Footer />
           </div>
         );
 
@@ -44,6 +50,7 @@ function App() {
           <div>
             <Navigator setScreen={setScreen} />
             <Project />
+            <Footer />
           </div>
         );
     }
