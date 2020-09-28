@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "@emotion/styled";
 function Form() {
+  let Iframe = styled.iframe`
+    width: 70vw;
+    height: 50vw;
+  `;
   return (
     <div>
-      <iframe
+      <Iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSc2tz74zJwsT-e8gziiFsWDpLsqNyhfNySL4mwb3SOzLlplzg/viewform?embedded=true"
         width="640"
         height="504"
@@ -12,7 +17,7 @@ function Form() {
         title="myform"
       >
         Loading…
-      </iframe>
+      </Iframe>
     </div>
   );
 }
