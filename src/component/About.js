@@ -23,13 +23,13 @@ function About() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="undraw_modern_professional_yt9h 1" clip-path="url(#clip0)">
+        <g id="undraw_modern_professional_yt9h 1" clipPath="url(#clip0)">
           <g id="bg1">
             <g id="Vector">
               <path
                 d="M531.002 349.261C545.416 312.924 551.297 273.763 548.194 234.795C545.09 195.827 533.084 158.091 513.1 124.494L105 181L496.09 99.4943C472.296 68.5172 441.693 43.4311 406.649 26.178C371.605 8.92502 333.061 -0.0321229 294 2.18525e-06C153.167 2.18525e-06 39 114.167 39 255C39.0028 266.639 39.7957 278.265 41.3734 289.797L531.002 349.261Z"
                 fill="#C89BDE"
-                fill-opacity="0.24"
+                fillOpacity="0.24"
               />
               <path
                 d="M531.002 349.261C545.416 312.924 551.297 273.763 548.194 234.795C545.09 195.827 533.084 158.091 513.1 124.494L105 181L496.09 99.4943C472.296 68.5172 441.693 43.4311 406.649 26.178C371.605 8.92502 333.061 -0.0321229 294 2.18525e-06C153.167 2.18525e-06 39 114.167 39 255C39.0028 266.639 39.7957 278.265 41.3734 289.797L531.002 349.261Z"
@@ -40,7 +40,7 @@ function About() {
               <path
                 d="M56.0444 346.81C92.9025 442.274 185.536 510 294 510C395.778 510 483.617 450.366 524.514 364.139L56.0444 346.81Z"
                 fill="#C89BDE"
-                fill-opacity="0.24"
+                fillOpacity="0.24"
               />
               <path
                 d="M56.0444 346.81C92.9025 442.274 185.536 510 294 510C395.778 510 483.617 450.366 524.514 364.139L56.0444 346.81Z"
@@ -292,7 +292,7 @@ function About() {
               id="Vector_58"
               d="M275 165C278.314 165 281 162.314 281 159C281 155.686 278.314 153 275 153C271.686 153 269 155.686 269 159C269 162.314 271.686 165 275 165Z"
               fill="#FFC5B3"
-              fill-opacity="0.9"
+              fillOpacity="0.9"
             />
             <path
               id="Vector_59"
@@ -334,8 +334,8 @@ function About() {
             y2="349.261"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F98B69" stop-opacity="0.44" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="#F98B69" stopOpacity="0.44" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <linearGradient
             id="paint1_linear"
@@ -345,8 +345,8 @@ function About() {
             y2="510"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#F98B69" stop-opacity="0.44" />
-            <stop offset="1" stop-color="white" stop-opacity="0" />
+            <stop stopColor="#F98B69" stopOpacity="0.44" />
+            <stop offset="1" stopColor="white" stopOpacity="0" />
           </linearGradient>
           <clipPath id="clip0">
             <rect width="583.904" height="652" fill="white" />
@@ -367,17 +367,12 @@ function About() {
         </p>
         <p>
           My working philosophies:
-          <ul>
-            <p>
-              <ImPointRight /> Learning by doing
-            </p>
-            <p>
-              <ImPointRight /> Always try to learn something new
-            </p>
-            <p>
-              <ImPointRight /> Use the right tool for the job
-            </p>
-          </ul>
+          <br />
+          <ImPointRight /> Learning by doing
+          <br />
+          <ImPointRight /> Always try to learn something new
+          <br />
+          <ImPointRight /> Use the right tool for the job
         </p>
       </div>
     </Container>
