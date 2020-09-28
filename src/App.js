@@ -19,9 +19,9 @@ function App() {
           <div>
             <Navigator setScreen={setScreen} />
             <LandingPage setScreen={setScreen} />
+            <Decor /> <About />
             <Decor />
             <Project />
-            <Decor /> <About />
             <Decor />
             <Contact setScreen={setScreen} />
             <Footer />
