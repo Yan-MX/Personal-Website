@@ -8,6 +8,7 @@ import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import About from "./component/About";
 import Form from "./component/Form";
+
 import { useState } from "react";
 function App() {
   const [screen, setScreen] = useState("main");
@@ -55,7 +56,18 @@ function App() {
         );
     }
   };
-  return <div>{show()}</div>;
+  return (
+    <div className="none">
+      <div className="none loading">
+        <h1 className="none loadingtext"> Loading...</h1>
+      </div>
+      {window.addEventListener("load", () => {
+        const preloader = document.querySelector(".loading");
+        preloader.classList.add("preload-finish");
+      })}
+      <div> {show()}</div>
+    </div>
+  );
 }
 
 export default App;
