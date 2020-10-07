@@ -8,7 +8,7 @@ import Contact from "./component/Contact";
 import Footer from "./component/Footer";
 import About from "./component/About";
 import Form from "./component/Form";
-
+import fish from "./pic/fish.png";
 import { useState } from "react";
 function App() {
   const [screen, setScreen] = useState("main");
@@ -59,12 +59,18 @@ function App() {
   return (
     <div className="none">
       <div className="none loading">
+        <img className="none fish" src={fish} alt="fish" />
+        <img className="none fish fish1" src={fish} alt="fish" />
+
         <h1 className="none loadingtext"> Loading...</h1>
       </div>
       {window.addEventListener("load", () => {
         const preloader = document.querySelector(".loading");
-        preloader.classList.add("preload-finish");
+        setTimeout(() => {
+          preloader.classList.add("preload-finish");
+        }, 3000);
       })}
+
       <div> {show()}</div>
     </div>
   );

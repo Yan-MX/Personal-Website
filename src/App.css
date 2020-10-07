@@ -34,7 +34,9 @@ p {
   margin: 1vw 0;
 }
 .loading {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: #f4f6ff;
@@ -42,20 +44,52 @@ p {
 }
 .loadingtext {
   text-align: center;
-  padding-top: 40%;
+  position: absolute;
+  top: 50%;
+  left: 40%;
   background-color: #f4f6ff;
   animation: loader 1s ease infinite alternate;
+  z-index: 8;
+}
+.fish {
+  height: 5vw;
+  position: absolute;
+  top: 30%;
+  left: 55%;
+  animation: fish 10s ease infinite alternate;
+  z-index: 7;
+}
+.fish1 {
+  top: 45%;
+  left: 35%;
+  animation: fish2 8s ease infinite alternate;
 }
 
+@keyframes fish {
+  from {
+    transform: translate(0vw, 0vw);
+  }
+  to {
+    transform: translate(15vw, 10vw);
+  }
+}
+@keyframes fish2 {
+  from {
+    transform: translate(0vw, 0vw);
+  }
+  to {
+    transform: translate(15vw, -6vw);
+  }
+}
 .preload-finish {
   opacity: 0;
   pointer-events: none;
 }
 @keyframes loader {
   from {
-    transform: translateX(0px);
+    transform: translateX(0vw);
   }
   to {
-    transform: translateX(20px);
+    transform: translateX(1vw);
   }
 }
