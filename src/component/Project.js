@@ -6,16 +6,24 @@ function Project() {
   let Button = styled.button`
     background-color: #d43109;
     padding: 0.5vw;
-    width: 8vw;
+    width: 7vw;
     margin-right: 1vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
   `;
   let Title = styled.p`
     margin: 5vw 0;
   `;
+  let P = styled.p`
+    font-size: 1vw;
+  `;
   let Button2 = styled.button`
     background-color: #4f8a8b;
     padding: 0.5vw;
-    width: 8vw;
+    width: 6vw;
+    margin-right: 1vw;
+    font-size: 1vw;
+    border-radius: 0.5vw;
   `;
   let Figure = styled.figure`
     position: relative;
@@ -67,7 +75,7 @@ function Project() {
                 </Figure>
                 <div>
                   <p>{project.name}</p>
-                  <p>{project.description}</p>
+                  <P>{project.description}</P>
                   <FlexContainer>
                     <Button
                       type="button"
@@ -78,7 +86,7 @@ function Project() {
                           : window.open(project.page);
                       }}
                     >
-                      {project.website ? "Website" : "Page"}
+                      {project.website ? "Vist Website" : "Visit Page"}
                     </Button>
                     <Button2
                       type="button"
@@ -89,6 +97,15 @@ function Project() {
                     >
                       Code
                     </Button2>
+                    <Button
+                      type="button"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.open(project.demo);
+                      }}
+                    >
+                      Watch demo
+                    </Button>
                   </FlexContainer>
                 </div>
               </FlexContainer>
