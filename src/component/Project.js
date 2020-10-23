@@ -1,7 +1,22 @@
 import React from "react";
 import data from "./Data";
 import styled from "@emotion/styled";
+import { useSpring, animated } from "react-spring";
 function Project() {
+  const calc = (x, y) => [
+    -(y - window.innerHeight / 2) / 20,
+    (x - window.innerWidth / 2) / 20,
+    1.1,
+  ];
+  const trans = (x, y, s) =>
+    `perspective(600px) rotateX(${x / 10}deg) rotateY(${
+      y / 10
+    }deg) scale(${s})`;
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 5, tension: 30, friction: 40 },
+  }));
+
   // styling
   let Button = styled.button`
     background-color: #d43109;
@@ -10,9 +25,14 @@ function Project() {
     margin-right: 1vw;
     font-size: 1vw;
     border-radius: 0.5vw;
+    cursor: pointer;
+    :hover {
+      color: black;
+      font-weight: bold;
+    }
   `;
   let Title = styled.p`
-    margin: 5vw 0;
+    margin: 5vw 4vw;
   `;
   let P = styled.p`
     font-size: 1vw;
@@ -24,6 +44,11 @@ function Project() {
     margin-right: 1vw;
     font-size: 1vw;
     border-radius: 0.5vw;
+    cursor: pointer;
+    :hover {
+      color: black;
+      font-weight: bold;
+    }
   `;
   let Figure = styled.figure`
     position: relative;
@@ -53,7 +78,12 @@ function Project() {
   let Container = styled.div`
     box-shadow: 0 4px 8px 0 #4f8a8b;
     padding: 0;
-    margin: 6vw 0;
+    margin: 0;
+    cursor: pointer;
+  `;
+  let Div = styled.div`
+    padding: 0;
+    margin: 0;
   `;
   let FlexContainer = styled.div`
     display: flex;
@@ -63,57 +93,67 @@ function Project() {
   `;
   // use data from data.js to display each project
   return (
-    <div>
+    <Div>
       <Title>My Projects</Title>
-      <div>
+      <Div>
         {data.map((project) => {
           return (
-            <Container key={project.id}>
-              <FlexContainer>
-                <Figure>
-                  <Img src={project.pic} alt="Website preview" />
-                </Figure>
-                <div>
-                  <p>{project.name}</p>
-                  <P>{project.description}</P>
+            <div key={project.id} style={{ marginBottom: "10vw" }}>
+              <animated.div
+                onMouseMove={({ clientX: x, clientY: y }) =>
+                  set({ xys: calc(x, y) })
+                }
+                onMouseLeave={() => set({ xys: [0, 0, 1] })}
+                style={{ transform: props.xys.interpolate(trans) }}
+              >
+                <Container>
                   <FlexContainer>
-                    <Button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        project.website
-                          ? window.open(project.website)
-                          : window.open(project.page);
-                      }}
-                    >
-                      {project.website ? "Vist Website" : "Visit Page"}
-                    </Button>
-                    <Button2
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.open(project.git);
-                      }}
-                    >
-                      Code
-                    </Button2>
-                    <Button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        window.open(project.demo);
-                      }}
-                    >
-                      Watch demo
-                    </Button>
+                    <Figure>
+                      <Img src={project.pic} alt="Website preview" />
+                    </Figure>
+                    <div>
+                      <p>{project.name}</p>
+                      <P>{project.description}</P>
+                      <FlexContainer>
+                        <Button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            project.website
+                              ? window.open(project.website)
+                              : window.open(project.page);
+                          }}
+                        >
+                          {project.website ? "Vist Website" : "Visit Page"}
+                        </Button>
+                        <Button2
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.open(project.git);
+                          }}
+                        >
+                          Code
+                        </Button2>
+                        <Button
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.open(project.demo);
+                          }}
+                        >
+                          Watch demo
+                        </Button>
+                      </FlexContainer>
+                    </div>
                   </FlexContainer>
-                </div>
-              </FlexContainer>
-            </Container>
+                </Container>
+              </animated.div>
+            </div>
           );
         })}
-      </div>
-    </div>
+      </Div>
+    </Div>
   );
 }
 

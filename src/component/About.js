@@ -14,6 +14,9 @@ function About() {
   let P = styled.p`
     margin-top: 3vw;
   `;
+  let P2 = styled.p`
+    font-size: 1.2vw;
+  `;
   return (
     <Container>
       <Svg
@@ -358,22 +361,21 @@ function About() {
           About Me <ImSmile />
         </P>
         <hr />
-        <p>
+        <P2>
           I started programming in 2018 and study informatics at University of
           Oslo. I love design and build things. I have been mostly working on
           Web & App development. I alway enjoy programming and learning new
           technologies along the way. I would describe myself as a quick-learner
           and a self-motivated person.
-        </p>
-        <p>
-          My working philosophies:
-          <br />
+        </P2>
+        <p>My working philosophies: </p>
+        <P2>
           <ImPointRight /> Learning by doing
           <br />
           <ImPointRight /> Always try to learn something new
           <br />
           <ImPointRight /> Use the right tool for the job
-        </p>
+        </P2>
       </div>
     </Container>
   );
