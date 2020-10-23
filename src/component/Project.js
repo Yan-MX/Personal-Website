@@ -16,7 +16,6 @@ function Project() {
     xys: [0, 0, 1],
     config: { mass: 5, tension: 30, friction: 40 },
   }));
-
   // styling
   let Button = styled.button`
     background-color: #d43109;
