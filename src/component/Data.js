@@ -35,5 +35,17 @@ let data = [
     description:
       "A react native app that can offer you some ideas of what to do when you feel bored at home. By spinning the magic wheels, you will get some inspirations. Built with react native Gesture Handler, Svg and Animation",
   },
+  {
+    id: 4,
+    name: "FireWatch Website",
+    git: "https://github.com/Yan-MX/Firewatch",
+    website: "http://firewatch.herokuapp.com/",
+    page: "",
+    pic: "https://iili.io/FNxOCP.png",
+    demo: "",
+
+    description:
+      "This website offers tools to generate data virtulization of forest temperate, rain, wind, burnt area etc. It is connected to firestore and can store data persistently, also allowing users to add new data to the database. Users can also export data into a CSV file.",
+  },
 ];
 export default data;

@@ -134,15 +134,19 @@ function Project() {
                         >
                           Code
                         </Button2>
-                        <Button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            window.open(project.demo);
-                          }}
-                        >
-                          Watch demo
-                        </Button>
+                        {project.demo === "" ? (
+                          " "
+                        ) : (
+                          <Button
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              window.open(project.demo);
+                            }}
+                          >
+                            Watch demo
+                          </Button>
+                        )}
                       </FlexContainer>
                     </div>
                   </FlexContainer>
